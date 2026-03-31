@@ -16,5 +16,10 @@ namespace Calculator_assignment
         {
             InitializeComponent();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
