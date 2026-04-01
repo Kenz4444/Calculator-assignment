@@ -32,13 +32,14 @@
             this.txtinput = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsquare = new System.Windows.Forms.Button();
-            this.btnmultiply = new System.Windows.Forms.Button();
             this.btndivide = new System.Windows.Forms.Button();
+            this.btnmultiply = new System.Windows.Forms.Button();
             this.btnsubtract = new System.Windows.Forms.Button();
             this.btnsquareroot = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnenter = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lbloutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtinput
@@ -71,28 +72,31 @@
             this.btnsquare.TabIndex = 2;
             this.btnsquare.Text = "y²";
             this.btnsquare.UseVisualStyleBackColor = true;
-            // 
-            // btnmultiply
-            // 
-            this.btnmultiply.AutoSize = true;
-            this.btnmultiply.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmultiply.Location = new System.Drawing.Point(28, 373);
-            this.btnmultiply.Name = "btnmultiply";
-            this.btnmultiply.Size = new System.Drawing.Size(75, 37);
-            this.btnmultiply.TabIndex = 3;
-            this.btnmultiply.Text = "÷";
-            this.btnmultiply.UseVisualStyleBackColor = true;
+            this.btnsquare.Click += new System.EventHandler(this.btnsquare_Click);
             // 
             // btndivide
             // 
             this.btndivide.AutoSize = true;
             this.btndivide.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndivide.Location = new System.Drawing.Point(247, 325);
+            this.btndivide.Location = new System.Drawing.Point(28, 373);
             this.btndivide.Name = "btndivide";
             this.btndivide.Size = new System.Drawing.Size(75, 37);
-            this.btndivide.TabIndex = 4;
-            this.btndivide.Text = "X";
+            this.btndivide.TabIndex = 3;
+            this.btndivide.Text = "÷";
             this.btndivide.UseVisualStyleBackColor = true;
+            this.btndivide.Click += new System.EventHandler(this.btndivide_Click);
+            // 
+            // btnmultiply
+            // 
+            this.btnmultiply.AutoSize = true;
+            this.btnmultiply.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmultiply.Location = new System.Drawing.Point(247, 325);
+            this.btnmultiply.Name = "btnmultiply";
+            this.btnmultiply.Size = new System.Drawing.Size(75, 37);
+            this.btnmultiply.TabIndex = 4;
+            this.btnmultiply.Text = "X";
+            this.btnmultiply.UseVisualStyleBackColor = true;
+            this.btnmultiply.Click += new System.EventHandler(this.btnmultiply_Click);
             // 
             // btnsubtract
             // 
@@ -104,6 +108,7 @@
             this.btnsubtract.TabIndex = 5;
             this.btnsubtract.Text = "-";
             this.btnsubtract.UseVisualStyleBackColor = true;
+            this.btnsubtract.Click += new System.EventHandler(this.btnsubtract_Click);
             // 
             // btnsquareroot
             // 
@@ -115,6 +120,7 @@
             this.btnsquareroot.TabIndex = 6;
             this.btnsquareroot.Text = " √y";
             this.btnsquareroot.UseVisualStyleBackColor = true;
+            this.btnsquareroot.Click += new System.EventHandler(this.btnsquareroot_Click);
             // 
             // btnclear
             // 
@@ -136,6 +142,16 @@
             this.btnenter.TabIndex = 8;
             this.btnenter.Text = "=";
             this.btnenter.UseVisualStyleBackColor = true;
+            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
+            // 
+            // lbloutput
+            // 
+            this.lbloutput.AutoSize = true;
+            this.lbloutput.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbloutput.Location = new System.Drawing.Point(22, 200);
+            this.lbloutput.Name = "lbloutput";
+            this.lbloutput.Size = new System.Drawing.Size(0, 31);
+            this.lbloutput.TabIndex = 9;
             // 
             // simplecalculator
             // 
@@ -143,12 +159,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbloutput);
             this.Controls.Add(this.btnenter);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsquareroot);
             this.Controls.Add(this.btnsubtract);
-            this.Controls.Add(this.btndivide);
             this.Controls.Add(this.btnmultiply);
+            this.Controls.Add(this.btndivide);
             this.Controls.Add(this.btnsquare);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.txtinput);
@@ -164,13 +181,14 @@
         private System.Windows.Forms.TextBox txtinput;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsquare;
-        private System.Windows.Forms.Button btnmultiply;
         private System.Windows.Forms.Button btndivide;
+        private System.Windows.Forms.Button btnmultiply;
         private System.Windows.Forms.Button btnsubtract;
         private System.Windows.Forms.Button btnsquareroot;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnenter;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbloutput;
     }
 }
 
