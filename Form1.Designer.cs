@@ -40,6 +40,7 @@
             this.btnenter = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbloutput = new System.Windows.Forms.Label();
+            this.btnanswer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtinput
@@ -47,16 +48,16 @@
             this.txtinput.Location = new System.Drawing.Point(12, 234);
             this.txtinput.Multiline = true;
             this.txtinput.Name = "txtinput";
-            this.txtinput.Size = new System.Drawing.Size(451, 60);
+            this.txtinput.Size = new System.Drawing.Size(776, 60);
             this.txtinput.TabIndex = 0;
             // 
             // btnadd
             // 
             this.btnadd.AutoSize = true;
             this.btnadd.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.Location = new System.Drawing.Point(28, 325);
+            this.btnadd.Location = new System.Drawing.Point(28, 318);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 37);
+            this.btnadd.Size = new System.Drawing.Size(96, 49);
             this.btnadd.TabIndex = 1;
             this.btnadd.Text = "+";
             this.btnadd.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             this.btnsquare.AutoSize = true;
             this.btnsquare.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsquare.Location = new System.Drawing.Point(133, 373);
+            this.btnsquare.Location = new System.Drawing.Point(27, 392);
             this.btnsquare.Name = "btnsquare";
-            this.btnsquare.Size = new System.Drawing.Size(75, 37);
+            this.btnsquare.Size = new System.Drawing.Size(97, 46);
             this.btnsquare.TabIndex = 2;
             this.btnsquare.Text = "y²";
             this.btnsquare.UseVisualStyleBackColor = true;
@@ -78,9 +79,9 @@
             // 
             this.btndivide.AutoSize = true;
             this.btndivide.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndivide.Location = new System.Drawing.Point(28, 373);
+            this.btndivide.Location = new System.Drawing.Point(499, 318);
             this.btndivide.Name = "btndivide";
-            this.btndivide.Size = new System.Drawing.Size(75, 37);
+            this.btndivide.Size = new System.Drawing.Size(106, 50);
             this.btndivide.TabIndex = 3;
             this.btndivide.Text = "÷";
             this.btndivide.UseVisualStyleBackColor = true;
@@ -90,9 +91,9 @@
             // 
             this.btnmultiply.AutoSize = true;
             this.btnmultiply.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmultiply.Location = new System.Drawing.Point(247, 325);
+            this.btnmultiply.Location = new System.Drawing.Point(321, 318);
             this.btnmultiply.Name = "btnmultiply";
-            this.btnmultiply.Size = new System.Drawing.Size(75, 37);
+            this.btnmultiply.Size = new System.Drawing.Size(112, 47);
             this.btnmultiply.TabIndex = 4;
             this.btnmultiply.Text = "X";
             this.btnmultiply.UseVisualStyleBackColor = true;
@@ -102,9 +103,9 @@
             // 
             this.btnsubtract.AutoSize = true;
             this.btnsubtract.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubtract.Location = new System.Drawing.Point(133, 325);
+            this.btnsubtract.Location = new System.Drawing.Point(169, 319);
             this.btnsubtract.Name = "btnsubtract";
-            this.btnsubtract.Size = new System.Drawing.Size(75, 37);
+            this.btnsubtract.Size = new System.Drawing.Size(109, 49);
             this.btnsubtract.TabIndex = 5;
             this.btnsubtract.Text = "-";
             this.btnsubtract.UseVisualStyleBackColor = true;
@@ -114,9 +115,9 @@
             // 
             this.btnsquareroot.AutoSize = true;
             this.btnsquareroot.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsquareroot.Location = new System.Drawing.Point(247, 373);
+            this.btnsquareroot.Location = new System.Drawing.Point(169, 392);
             this.btnsquareroot.Name = "btnsquareroot";
-            this.btnsquareroot.Size = new System.Drawing.Size(75, 37);
+            this.btnsquareroot.Size = new System.Drawing.Size(109, 46);
             this.btnsquareroot.TabIndex = 6;
             this.btnsquareroot.Text = " √y";
             this.btnsquareroot.UseVisualStyleBackColor = true;
@@ -125,20 +126,21 @@
             // btnclear
             // 
             this.btnclear.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(347, 402);
+            this.btnclear.Location = new System.Drawing.Point(321, 402);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(116, 36);
+            this.btnclear.Size = new System.Drawing.Size(284, 36);
             this.btnclear.TabIndex = 7;
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btnenter
             // 
             this.btnenter.AutoSize = true;
             this.btnenter.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenter.Location = new System.Drawing.Point(363, 325);
+            this.btnenter.Location = new System.Drawing.Point(653, 304);
             this.btnenter.Name = "btnenter";
-            this.btnenter.Size = new System.Drawing.Size(100, 71);
+            this.btnenter.Size = new System.Drawing.Size(116, 71);
             this.btnenter.TabIndex = 8;
             this.btnenter.Text = "=";
             this.btnenter.UseVisualStyleBackColor = true;
@@ -153,12 +155,25 @@
             this.lbloutput.Size = new System.Drawing.Size(0, 31);
             this.lbloutput.TabIndex = 9;
             // 
+            // btnanswer
+            // 
+            this.btnanswer.AutoSize = true;
+            this.btnanswer.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnanswer.Location = new System.Drawing.Point(653, 390);
+            this.btnanswer.Name = "btnanswer";
+            this.btnanswer.Size = new System.Drawing.Size(116, 48);
+            this.btnanswer.TabIndex = 10;
+            this.btnanswer.Text = "ANS";
+            this.btnanswer.UseVisualStyleBackColor = true;
+            this.btnanswer.Click += new System.EventHandler(this.btnanswer_Click);
+            // 
             // simplecalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnanswer);
             this.Controls.Add(this.lbloutput);
             this.Controls.Add(this.btnenter);
             this.Controls.Add(this.btnclear);
@@ -189,6 +204,7 @@
         private System.Windows.Forms.Button btnenter;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lbloutput;
+        private System.Windows.Forms.Button btnanswer;
     }
 }
 
